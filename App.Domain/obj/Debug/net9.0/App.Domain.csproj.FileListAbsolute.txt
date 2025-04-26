@@ -1,0 +1,11 @@
+C:\Users\omare\OneDrive\Desktop\App\App.Domain\bin\Debug\net9.0\App.Domain.deps.json
+C:\Users\omare\OneDrive\Desktop\App\App.Domain\bin\Debug\net9.0\App.Domain.dll
+C:\Users\omare\OneDrive\Desktop\App\App.Domain\bin\Debug\net9.0\App.Domain.pdb
+C:\Users\omare\OneDrive\Desktop\App\App.Domain\obj\Debug\net9.0\App.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\omare\OneDrive\Desktop\App\App.Domain\obj\Debug\net9.0\App.Domain.AssemblyInfoInputs.cache
+C:\Users\omare\OneDrive\Desktop\App\App.Domain\obj\Debug\net9.0\App.Domain.AssemblyInfo.cs
+C:\Users\omare\OneDrive\Desktop\App\App.Domain\obj\Debug\net9.0\App.Domain.csproj.CoreCompileInputs.cache
+C:\Users\omare\OneDrive\Desktop\App\App.Domain\obj\Debug\net9.0\App.Domain.dll
+C:\Users\omare\OneDrive\Desktop\App\App.Domain\obj\Debug\net9.0\refint\App.Domain.dll
+C:\Users\omare\OneDrive\Desktop\App\App.Domain\obj\Debug\net9.0\App.Domain.pdb
+C:\Users\omare\OneDrive\Desktop\App\App.Domain\obj\Debug\net9.0\ref\App.Domain.dll
