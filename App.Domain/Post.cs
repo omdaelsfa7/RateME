@@ -1,26 +1,32 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+
 namespace App.Domain{
     public class Post
     {
-        [Key]
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
         public int PostID { get; set; }
 
-        [Required]
+        [BsonElement("UserName")]
         public User User { get; set; }
 
-        [Required]
+        [BsonElement("PostTitle")]
         public string PostTitle { get; set; }
 
-        [Required]
+        [BsonElement("Rate")]
         public double Rate { get; set; }
 
-        [Url]
+        [BsonElement("PhotoUrl")]
         public string PhotoUrl { get; set; }
 
-        [Timestamp]
+        [BsonElement("Time")]
         public DateTime Time { get; set; }
-        public ICollection<Comment> Comments { get; set; }
-        public ICollection<Like> Likes { get; set; }
+        [BsonElement("Comments")]
+        public List<Comment> Comments { get; set; }
+        [BsonElement("Likes")]
+        public List<Like> Likes { get; set; }
 
     }
 }

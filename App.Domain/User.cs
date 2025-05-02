@@ -1,31 +1,35 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using MongoDB.Bson.Serialization.Attributes;
 namespace   App.Domain{
 
     public class User
     {
-        [Key]
+        [BsonId]
         public string UserName { get; set; }
 
-        [Required]
+        [BsonElement("UserName")]
         public string FullName { get; set; }
 
-        [Required]
+        [BsonElement("PhoneNumber")]
         public string PhoneNumber { get; set; }
 
-        [Required]
+        [BsonElement("Email")]
         public string Email { get; set; }
 
-        [Required]
+        [BsonElement("Password")]
         public string Password { get; set; }
 
-        [Url]
+        [BsonElement("PfpUrl")]
         public string PfpUrl { get; set; }
 
-        public ICollection<User> Followers { get; set; }
-        public ICollection<User> Following { get; set; }
-        public ICollection<Like> LikedPosts { get; set; }
-        public ICollection<Comment> Comments { get; set; }
-
+        [BsonElement("Bio")]
         public string Bio { get; set; }
+
+        public List<User> Followers { get; set; }
+        public List<User> Following { get; set; }
+        public List<Like> LikedPosts { get; set; }
+        public List<Comment> Comments { get; set; }
+
+        
     }
 }

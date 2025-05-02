@@ -1,21 +1,23 @@
 ﻿using App.Application.DTO;
 using App.Application.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using MongoDB.Driver;
+using App.Domain;
 namespace App.Infrastructure.Repository
 {
     public class LoginRepository : ILoginRepository 
     {
-        //private readonly AppDbContext _context;
-        private readonly MongoDbContext _context;
-        public LoginRepository(MongoDbContext context)
+
+        private readonly IMongo _mongo;
+        public LoginRepository(IMongo mongo)
         {
-            _context = context ;
+            _mongo = mongo ;
         }
         public async Task<bool> AsyncCheckLogin(LoginDTO user)
         {
-            var User = await  _context.Users.Where(u => 
-                                    u.UserName == user.UserName &&
-                                    u.Password == user.Password).FirstOrDefaultAsync(); // Lesa MongoDB
+            var filter = Builders<User>.Filter.Eq(u => u.UserName, user.UserName) &
+                         Builders<User>.Filter.Eq(u => u.Password, user.Password);
+            var User = await  _mongo.FindOneAsync<User>(filter);
             return User != null;
         }
     }

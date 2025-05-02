@@ -9,3 +9,4 @@ C:\Users\omare\OneDrive\Desktop\App\App.Domain\obj\Debug\net9.0\App.Domain.dll
 C:\Users\omare\OneDrive\Desktop\App\App.Domain\obj\Debug\net9.0\refint\App.Domain.dll
 C:\Users\omare\OneDrive\Desktop\App\App.Domain\obj\Debug\net9.0\App.Domain.pdb
 C:\Users\omare\OneDrive\Desktop\App\App.Domain\obj\Debug\net9.0\ref\App.Domain.dll
+C:\Users\omare\OneDrive\Desktop\App\App.Domain\obj\Debug\net9.0\App.Domain.csproj.AssemblyReference.cache

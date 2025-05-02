@@ -8,8 +8,8 @@ namespace App.Infrastructure
 {
     public class MongoSettings
     {
-        public string ConnectionString { get; set; }
-        public string DatabaseName { get; set; }
+        public string MongoConnection { get; set; }
+        public string DataBaseName { get; set; }
 
     }
 }

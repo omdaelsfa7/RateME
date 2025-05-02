@@ -4,24 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using App.Domain;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 
 namespace App.Infrastructure
 {
-    public class MongoDbContext
-    {
+    public class MongoDbContext 
+    { 
         private readonly IMongoDatabase _database;
         public MongoDbContext(IOptions<MongoSettings> mongoSettings)
         {
-            var client = new MongoClient(mongoSettings.Value.ConnectionString);
-            _database = client.GetDatabase(mongoSettings.Value.DatabaseName);
+            var client = new MongoClient(mongoSettings.Value.MongoConnection);
+            _database = client.GetDatabase(mongoSettings.Value.DataBaseName); 
         }
 
         public IMongoCollection<User> Users => _database.GetCollection<User>("Users");
         public IMongoCollection<Comment> Comments => _database.GetCollection<Comment>("Comments");
         public IMongoCollection<Like> Likes => _database.GetCollection<Like>("Likes");
         public IMongoCollection<Post> Posts => _database.GetCollection<Post>("Posts");
+
 
     }
 }

@@ -2,29 +2,28 @@
 using Microsoft.EntityFrameworkCore;
 using App.Domain;
 using App.Application.DTO;
+using MongoDB.Driver;
 
 namespace App.Infrastructure.Repository
 {
     public class SignUpRepository : ISignUpRepository
     {
-        //private readonly AppDbContext _context;
-        private readonly MongoDbContext _context;
-        public SignUpRepository(MongoDbContext context)
+        private readonly IMongo _mongo;
+        public SignUpRepository(IMongo mongo)
         {
-            _context = context;
+            _mongo = mongo;
         }
         public async Task<bool> AsyncCheckSignUp(SignUpDTO Signuser)
         {
-            var user = await _context.Users
-                .Where(u => u.UserName == Signuser.UserName)
-                .FirstOrDefaultAsync();
-            return user != null;
+            var filter = Builders<User>.Filter.Eq(u => u.UserName, Signuser.UserName) &
+                         Builders<User>.Filter.Eq(u => u.Email, Signuser.Email);
+            var user = await _mongo.FindOneAsync<User>(filter);
+            return (user == null);
         }
         public async Task<bool> AsyncSignUser(User user)
         {
            
-                await _context.Users.AddAsync(user);
-                await _context.SaveChangesAsync();
+                await _mongo.AddAsync(user);
                 return true;
         }
     }

@@ -1,18 +1,21 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 namespace App.Domain
 {
     public class Like
     {
-        [Key]
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
         public int LikeID { get; set; }
 
-        [Required]
+        [BsonElement("User")]
         public User User { get; set; }
 
-        [Timestamp]
+        [BsonElement("Time")]
         public DateTime Time { get; set; }
 
-        [Required]
+        [BsonElement("Post")]
         public Post Post { get; set; }
 
     }

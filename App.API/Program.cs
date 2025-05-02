@@ -10,15 +10,12 @@ using FluentValidation;
 var builder = WebApplication.CreateBuilder(args);
 
 // MongoDB Configuration
-builder.Services.AddSingleton<AppDbContext>();
+builder.Services.AddSingleton<IMongo, MongoRepository>();
 
 // MongoDB bind settings
-builder.Services.Configure<MongoSettings>(
-    builder.Configuration.GetSection("ConnectionStrings"));
+builder.Services.Configure<MongoSettings>
+    (builder.Configuration.GetSection("MongoSettings"));
 
-// DbContext Configuration
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Register Services
 builder.Services.AddScoped<ISignUpService, SignUpService>();

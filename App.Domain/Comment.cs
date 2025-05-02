@@ -1,21 +1,24 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 namespace App.Domain
 {
     public class Comment
     {
-        [Key]
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
         public int CommentID { get; set; }
 
-        [Required]
+        [BsonElement("User")]
         public User User { get; set; }
 
-        [Timestamp]
+        [BsonElement("Time")]
         public DateTime Time { get; set; }
 
-        [Required]
+        [BsonElement("Post")]
         public Post Post { get; set; }
 
-        [Required]
+        [BsonElement("CommentContent")]
         public string CommentContent { get; set; }
     }
 

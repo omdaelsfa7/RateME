@@ -93,3 +93,11 @@ C:\Users\omare\OneDrive\Desktop\App\App.API\obj\Debug\net9.0\App.API.genruntimec
 C:\Users\omare\OneDrive\Desktop\App\App.API\obj\Debug\net9.0\ref\App.API.dll
 C:\Users\omare\OneDrive\Desktop\App\App.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\omare\OneDrive\Desktop\App\App.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\omare\OneDrive\Desktop\App\App.API\bin\Debug\net9.0\DnsClient.dll
+C:\Users\omare\OneDrive\Desktop\App\App.API\bin\Debug\net9.0\FluentValidation.dll
+C:\Users\omare\OneDrive\Desktop\App\App.API\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\omare\OneDrive\Desktop\App\App.API\bin\Debug\net9.0\MongoDB.Bson.dll
+C:\Users\omare\OneDrive\Desktop\App\App.API\bin\Debug\net9.0\MongoDB.Driver.dll
+C:\Users\omare\OneDrive\Desktop\App\App.API\bin\Debug\net9.0\SharpCompress.dll
+C:\Users\omare\OneDrive\Desktop\App\App.API\bin\Debug\net9.0\Snappier.dll
+C:\Users\omare\OneDrive\Desktop\App\App.API\bin\Debug\net9.0\ZstdSharp.dll
