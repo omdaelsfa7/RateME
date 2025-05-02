@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using App.Application.Interfaces;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 
 namespace App.Infrastructure
 {
-    public class MongoRepository : IMongo
+    public class BaseRepository : IBaseRepository
     {
         private readonly IMongoDatabase _database;
-        public MongoRepository(IOptions<MongoSettings> mongoSettings)
+        public BaseRepository(IOptions<MongoSettings> mongoSettings)
         {
             var connectionString = mongoSettings.Value.MongoConnection;
             var databaseName = mongoSettings.Value.DataBaseName;

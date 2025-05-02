@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace App.Application.DTO
+﻿namespace App.Domain.DTOs
 {
     public class SignUpDTO
     {

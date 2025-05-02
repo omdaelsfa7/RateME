@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using MongoDB.Driver;
 
 namespace App.Application.Interfaces
 {
-    public interface IMongo
+    public interface IBaseRepository
     {
         public Task<T> AddAsync<T>(T entity);
 

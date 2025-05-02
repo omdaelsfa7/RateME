@@ -1,5 +1,6 @@
-﻿using App.Application.DTO;
-using App.Domain;
+﻿using App.Domain.DTOs;
+using App.Domain.Models;
+
 
 namespace App.Application.Interfaces
 {

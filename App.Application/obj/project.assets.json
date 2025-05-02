@@ -257,6 +257,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
+          "FluentValidation": "11.11.0",
           "MongoDB.Bson": "3.3.0"
         },
         "compile": {
@@ -718,40 +719,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\omare\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/home/ahmedg/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\omare\\OneDrive\\Desktop\\App\\App.Application\\App.Application.csproj",
+      "projectUniqueName": "/home/ahmedg/RateME/App.Application/App.Application.csproj",
       "projectName": "App.Application",
-      "projectPath": "C:\\Users\\omare\\OneDrive\\Desktop\\App\\App.Application\\App.Application.csproj",
-      "packagesPath": "C:\\Users\\omare\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\omare\\OneDrive\\Desktop\\App\\App.Application\\obj\\",
+      "projectPath": "/home/ahmedg/RateME/App.Application/App.Application.csproj",
+      "packagesPath": "/home/ahmedg/.nuget/packages/",
+      "outputPath": "/home/ahmedg/RateME/App.Application/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\omare\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/ahmedg/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\omare\\OneDrive\\Desktop\\App\\App.Domain\\App.Domain.csproj": {
-              "projectPath": "C:\\Users\\omare\\OneDrive\\Desktop\\App\\App.Domain\\App.Domain.csproj"
+            "/home/ahmedg/RateME/App.Domain/App.Domain.csproj": {
+              "projectPath": "/home/ahmedg/RateME/App.Domain/App.Domain.csproj"
             }
           }
         }
@@ -766,7 +759,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net9.0": {
@@ -796,12 +789,18 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[9.0.4, 9.0.4]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.105/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

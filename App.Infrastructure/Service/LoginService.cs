@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using App.Application.DTO;
+﻿
+using App.Domain.DTOs;
 using App.Application.Interfaces;
 
-namespace App.Application.Service
+namespace App.Infrastructure.Service
 {
     public class LoginService : ILoginService
     {
@@ -15,9 +11,9 @@ namespace App.Application.Service
         {
             _loginRepo = loginRepo;
         }
-        public async Task<bool> AsyncCheckLogin(LoginDTO user )
+        public async Task<bool> AsyncCheckLogin(LoginDTO user)
         {
-            
+
             return await _loginRepo.AsyncCheckLogin(user);
         }
     }

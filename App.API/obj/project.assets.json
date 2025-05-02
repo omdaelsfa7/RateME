@@ -763,6 +763,19 @@
           }
         }
       },
+      "MongoDB.EntityFrameworkCore/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "9.0.4",
+          "MongoDB.Driver": "3.3.0"
+        },
+        "compile": {
+          "lib/net8.0/MongoDB.EntityFrameworkCore.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/MongoDB.EntityFrameworkCore.dll": {}
+        }
+      },
       "NETStandard.Library/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -2457,6 +2470,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
+          "FluentValidation": "11.11.0",
           "MongoDB.Bson": "3.3.0"
         },
         "compile": {
@@ -2473,7 +2487,8 @@
           "App.Application": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.4",
           "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.1.6",
-          "MongoDB.Driver": "3.3.0"
+          "MongoDB.Driver": "3.3.0",
+          "MongoDB.EntityFrameworkCore": "9.0.0"
         },
         "compile": {
           "bin/placeholder/App.Infrastructure.dll": {}
@@ -3813,6 +3828,22 @@
         "lib/netstandard2.1/MongoDB.Driver.xml",
         "mongodb.driver.3.3.0.nupkg.sha512",
         "mongodb.driver.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "MongoDB.EntityFrameworkCore/9.0.0": {
+      "sha512": "vwnd2pcoZeVvk2hyJHaD//LvLK+qi/AVCTykNSRy2FybKFNhuFexWcoeAh0IUgnDtHXOja/h9o8QisNxV6mLfw==",
+      "type": "package",
+      "path": "mongodb.entityframeworkcore/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "BREAKING-CHANGES.md",
+        "LICENSE.md",
+        "README.md",
+        "lib/net8.0/MongoDB.EntityFrameworkCore.dll",
+        "mongodb.entityframeworkcore.9.0.0.nupkg.sha512",
+        "mongodb.entityframeworkcore.nuspec",
         "packageIcon.png"
       ]
     },
@@ -7857,40 +7888,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\omare\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/home/ahmedg/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\omare\\OneDrive\\Desktop\\App\\App.API\\App.API.csproj",
+      "projectUniqueName": "/home/ahmedg/RateME/App.API/App.API.csproj",
       "projectName": "App.API",
-      "projectPath": "C:\\Users\\omare\\OneDrive\\Desktop\\App\\App.API\\App.API.csproj",
-      "packagesPath": "C:\\Users\\omare\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\omare\\OneDrive\\Desktop\\App\\App.API\\obj\\",
+      "projectPath": "/home/ahmedg/RateME/App.API/App.API.csproj",
+      "packagesPath": "/home/ahmedg/.nuget/packages/",
+      "outputPath": "/home/ahmedg/RateME/App.API/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\omare\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/ahmedg/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\omare\\OneDrive\\Desktop\\App\\App.Infrastructure\\App.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\omare\\OneDrive\\Desktop\\App\\App.Infrastructure\\App.Infrastructure.csproj"
+            "/home/ahmedg/RateME/App.Infrastructure/App.Infrastructure.csproj": {
+              "projectPath": "/home/ahmedg/RateME/App.Infrastructure/App.Infrastructure.csproj"
             }
           }
         }
@@ -7905,7 +7928,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net9.0": {
@@ -7935,6 +7958,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[9.0.4, 9.0.4]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -7943,7 +7972,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.105/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
