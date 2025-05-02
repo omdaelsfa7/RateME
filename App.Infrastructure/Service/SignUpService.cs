@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using App.Application.Interfaces;
-using App.Application.DTO;
-using App.Domain;
+﻿using App.Application.Interfaces;
+using App.Domain.DTOs;
+using App.Domain.Models;
 
-namespace App.Application.Service
+namespace App.Infrastructure.Service
 {
     public class SignUpService : ISignUpService
     {
-        private readonly ISignUpRepository _signUpRepo;             
+        private readonly ISignUpRepository _signUpRepo;
         public SignUpService(ISignUpRepository signUpRepository)
         {
             _signUpRepo = signUpRepository;
@@ -31,7 +26,7 @@ namespace App.Application.Service
                     PhoneNumber = user.PhoneNumber,
                     FullName = user.FullName
                 }
-                ) ;  
+                );
                 return true;
             }
             return false;

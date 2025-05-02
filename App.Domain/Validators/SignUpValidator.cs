@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FluentValidation;
-using App.Application.DTO;
+﻿using FluentValidation;
+using App.Domain.DTOs;
 
 namespace App.Application.Validators
 {
-    public class SignUpValidator : AbstractValidator<SignUpDTO> 
+    public class SignUpValidator : AbstractValidator<SignUpDTO>
     {
         public SignUpValidator()
         {
@@ -38,6 +33,6 @@ namespace App.Application.Validators
                 .Matches(@"^(010|011|012|015)\d{8}$")
                 .WithMessage("Enter Valid Phone Number");
         }
-        
+
     }
 }

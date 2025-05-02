@@ -1,16 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations;
-using MongoDB.Bson;
+﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-
-namespace App.Domain{
-    public class Post
+using App.Domain.Models.Common;
+namespace App.Domain.Models
+{
+    public class Post : AuditableEntity
     {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public int PostID { get; set; }
 
         [BsonElement("UserName")]
-        public User User { get; set; }
+        public string Userid { get; set; }
 
         [BsonElement("PostTitle")]
         public string PostTitle { get; set; }
@@ -24,9 +21,9 @@ namespace App.Domain{
         [BsonElement("Time")]
         public DateTime Time { get; set; }
         [BsonElement("Comments")]
-        public List<Comment> Comments { get; set; }
+        public List<string> CommentsIds { get; set; }
         [BsonElement("Likes")]
-        public List<Like> Likes { get; set; }
+        public List<string> LikesIds { get; set; }
 
     }
 }

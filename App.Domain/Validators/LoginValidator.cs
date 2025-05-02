@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FluentValidation;
-using App.Application.DTO;
+﻿using FluentValidation;
+using App.Domain.DTOs;
 
 namespace App.Application.Validators
 {
@@ -13,8 +8,8 @@ namespace App.Application.Validators
         public LoginValidator()
         {
             RuleFor(c => c.Email).NotEmpty()
-               .WithMessage("Email is required")
-               .EmailAddress();
+                .WithMessage("Email is required")
+                .EmailAddress();
 
             RuleFor(c => c.Password).NotEmpty()
                 .WithMessage("Password is required")

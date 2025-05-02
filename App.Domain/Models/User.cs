@@ -1,13 +1,15 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using App.Domain.Models.Common;
 using MongoDB.Bson.Serialization.Attributes;
-namespace   App.Domain{
+namespace App.Domain.Models
+{
 
-    public class User
+    public class User : AuditableEntity
     {
-        [BsonId]
+        [BsonElement("UserName")]
         public string UserName { get; set; }
 
-        [BsonElement("UserName")]
+        [BsonElement("FullName")]
         public string FullName { get; set; }
 
         [BsonElement("PhoneNumber")]
@@ -25,11 +27,10 @@ namespace   App.Domain{
         [BsonElement("Bio")]
         public string Bio { get; set; }
 
-        public List<User> Followers { get; set; }
-        public List<User> Following { get; set; }
-        public List<Like> LikedPosts { get; set; }
-        public List<Comment> Comments { get; set; }
+        public List<string> FollowersIds { get; set; }
+        public List<string> FollowingIds { get; set; }
+        public List<string> LikedPostsIds { get; set; }
+        public List<string> CommentsIds { get; set; }
 
-        
     }
 }
